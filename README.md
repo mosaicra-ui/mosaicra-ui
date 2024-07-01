@@ -106,8 +106,8 @@ Follow the installation instructions provided in the "Getting Started" section t
 
 ## Communication
 
-- Join our Slack channel for real-time communication.
-- Regular contributor meetings are held every Thursday at 3 PM UTC.
+- Join our [**Slack channel**](https://github.com/mosaicra-ui/contributors) for real-time communication.
+- Regular contributor meetings are held every Thursday at 8:30 PM IST.
 
 ## Code of Conduct
 
