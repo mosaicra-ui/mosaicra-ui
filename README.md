@@ -24,7 +24,7 @@ Follow the instructions below to run the project locally using Next.js.
 #### Clone the repository
 
 ```bash
-git clone https://github.com/gautamankoji/serverx-org.git
+git clone https://github.com/mosaicra-ui/mosaicra-ui.git
 ```
 
 #### Navigate to the project directory
