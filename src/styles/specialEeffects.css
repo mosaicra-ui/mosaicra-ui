@@ -1,0 +1,122 @@
+.gradient-text {
+        /* Fallback for older browsers */
+        background: hsla(258, 100%, 62%, 1);
+        /* Standard syntax */
+        background: linear-gradient(90deg,
+                        hsla(258, 100%, 62%, 1) 0%,
+                        hsla(183, 100%, 50%, 1) 100%);
+        /* Vendor-specific prefixes */
+        background: -moz-linear-gradient(90deg,
+                        hsla(258, 100%, 62%, 1) 0%,
+                        hsla(183, 100%, 50%, 1) 100%);
+        background: -webkit-linear-gradient(90deg,
+                        hsla(258, 100%, 62%, 1) 0%,
+                        hsla(183, 100%, 50%, 1) 100%);
+        /* Internet Explorer */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e4cf1", endColorstr="#0075ff", GradientType=1);
+
+        /* Apply gradient as text color */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+        scroll-margin-top: 80px;
+        font-family: "Rowdies Bold", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+
+}
+
+.customScrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #888 transparent;
+        scroll-behavior: smooth;
+}
+
+.customScrollbar::-webkit-scrollbar {
+        width: 6px;
+        /* Adjust width to your preference */
+        height: 10px;
+        /* Adjust height to your preference */
+        border-radius: 9999px;
+        /* Apply rounded corners */
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+        background-color: transparent;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+        background-color: #6b7280;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(112, 120, 130, 0.9);
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:active {
+        background-color: rgba(96, 165, 250, 0.9);
+}
+
+
+.not-sticky {
+        position: static;
+}
+
+.loader-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+}
+
+.loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #0099ff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+        0% {
+                transform: rotate(0deg);
+        }
+
+        100% {
+                transform: rotate(360deg);
+        }
+}
+
+.show {
+        @apply opacity-100 translate-x-0;
+}
+
+.gradient-loader {
+        @apply bg-gradient-to-r from-primary-light via-blue-500 to-primary-light rounded-full transition-all duration-150 ease-in-out;
+        background-size: 200% 200%;
+        animation: gradiant-move 1s infinite;
+}
+
+@keyframes gradiant-move {
+        0% {
+                background-position: left
+        }
+
+        50% {
+                background-position: right
+        }
+
+        100% {
+                background-position: left
+        }
+}

@@ -1,0 +1,135 @@
+.articlesContent a {
+    @apply hover:underline;
+
+}
+
+.code_block {
+    position: relative;
+    overflow-x: auto;
+}
+
+.code_block pre {
+    position: relative;
+    overflow-x: auto;
+}
+
+.code_block pre code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.code_block pre code::before {
+    content: attr(data-line);
+    display: inline-block;
+    width: 2em;
+    user-select: none;
+    opacity: 0.3;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0.5em 0.5em 0.5em 0;
+    border-right: 1px solid #ddd;
+}
+
+
+.aLink {
+    @apply text-blue-500;
+}
+
+.codeStyle {
+    @apply bg-gray-800/15 dark:bg-gray-200/15 rounded-md px-1.5 text-xs font-semibold;
+    position: relative;
+    display: inline-block;
+}
+
+.codeStyle::before {
+    content: '';
+
+}
+
+.codeStyle::after {
+    content: '';
+
+}
+
+.hLinkIcon::before,
+.h1LinkIcon::before,
+.h2LinkIcon::before,
+.h3LinkIcon::before {
+    content: "#";
+    font-size: 0.8rem;
+}
+
+.hLink,
+.h2Link,
+.h3Link {
+    text-decoration: none !important;
+}
+
+.codeStyle {
+    counter-reset: line;
+}
+
+.codeStyle[data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+
+    /* Other styling */
+    display: inline-block;
+    width: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: gray;
+}
+
+.codeStyle[data-line-numbers-max-digits='2']::before {
+    width: 2rem;
+}
+
+.codeStyle[data-line-numbers-max-digits='3']::before {
+    width: 3rem;
+}
+
+.highlightedLine {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    padding: 2px;
+    padding-left: 0;
+    padding-right: 4px;
+    border-radius: 2px;
+    border-left: 2px solid #7B00D3;
+}
+
+.highlightedChars {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.prettyCodeFragment {
+    position: relative;
+}
+
+.prettyCodeTitle {
+    position: absolute;
+    right: 0;
+    background-color: #7B00D3;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-end-start-radius: 4px;
+}
+
+.prettyCodeCaption {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #747474;
+}
