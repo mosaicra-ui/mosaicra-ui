@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Mosaicra (moh · zay · uhkra) UI Library
+
 ### What is the purpose of Mosaicra UI?
 
 The purpose of Mosaicra UI is to provide a unified solution across different frameworks, helping individuals navigate the complexities of using multiple frameworks. Mosaicra UI offers less complex and more customizable components, both for web and mobile, with added animations using frameworks like GSAP and Framer Motion.
@@ -30,13 +32,16 @@ git clone https://github.com/mosaicra-ui/mosaicra-ui.git
 #### Navigate to the project directory
 
 ```bash
-cd serverx-org
+cd mosaicra-ui
 ```
 
 #### Install dependencies
 
 ```bash
 npm install
+# otherwise
+npm install --legacy-peer-deps
+
 # or
 yarn install
 ```
@@ -113,8 +118,10 @@ Follow the installation instructions provided in the "Getting Started" section t
 
 All contributors must follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/). Violations may result in being banned from the project.
 
+<!--
 ## Resources
 
 - [Project Documentation](https://mosaicra-ui/docs)
 - [Tutorials](https://mosaicra-ui/tutorials)
 - [API Reference](https://mosaicra-ui/api)
+-->
