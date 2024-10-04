@@ -1,0 +1,111 @@
+/* Updated styles for VideoComponent.css */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.video-heading {
+  color: #00796b;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-player {
+  position: relative;
+  width: 600px;
+  background-color: #000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.video-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  background-color: #e0f7fa;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.control-button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.control-button:hover {
+  background-color: #004d40;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.slider-container label {
+  color: #00796b;
+  font-weight: bold;
+}
+
+.volume-slider,
+.progress-slider {
+  width: 100%;
+  max-width: 400px;
+  appearance: none;
+  background: #00796b;
+  border-radius: 4px;
+  height: 6px;
+  outline: none;
+}
+
+/* Customizing the slider thumb (dot) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #00796b; /* Change the thumb (dot) color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #00796b; /* Change the thumb (dot) color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
