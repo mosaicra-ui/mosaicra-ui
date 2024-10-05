@@ -1,0 +1,165 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e3f2fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.audio-heading {
+  color: #0288d1;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.audio-player {
+  position: relative;
+  width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.audio-player:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.control-button {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control-button:hover {
+  background-color: #0277bd;
+  transform: scale(1.1);
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.slider-container label {
+  color: #0288d1;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.volume-slider,
+.progress-slider {
+  width: 100%;
+  appearance: none;
+  background: #0288d1;
+  border-radius: 4px;
+  height: 8px;
+  outline: none;
+}
+
+/* Customizing the slider thumb (dot) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #0288d1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #0288d1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive CSS for smaller screens */
+@media (max-width: 768px) {
+  .audio-player {
+    width: 300px;
+    padding: 20px;
+  }
+
+  .audio-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .control-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+
+  .slider-container label {
+    font-size: 1rem;
+  }
+
+  input[type="range"]::-webkit-slider-thumb,
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Extra small screens (like mobile devices) */
+@media (max-width: 480px) {
+  .audio-player {
+    width: 250px;
+    padding: 15px;
+  }
+
+  .audio-heading {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .control-button {
+    padding: 8px 15px;
+    font-size: 1.2rem;
+  }
+
+  .slider-container label {
+    font-size: 0.9rem;
+  }
+
+  input[type="range"]::-webkit-slider-thumb,
+  input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+  }
+}

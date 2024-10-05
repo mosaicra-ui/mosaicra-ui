@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Audio Player</title>
+    <link rel="stylesheet" href="AudioComponent.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <h1 class="audio-heading">Custom Audio Player</h1>
+
+    <div class="audio-player">
+      <audio id="audio" class="audio">
+        <source src="audio.mp3" type="audio/mp3" />
+        Your browser does not support the audio tag.
+      </audio>
+
+      <div class="audio-controls">
+        <button id="playPauseAudio" class="control-button">
+          <i id="audioPlayPauseIcon" class="fa fa-play"></i>
+        </button>
+      </div>
+
+      <div class="slider-container">
+        <label for="audioVolume">Volume:</label>
+        <input
+          type="range"
+          id="audioVolume"
+          class="volume-slider"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+        />
+      </div>
+
+      <div class="slider-container">
+        <label for="audioProgress">Progress:</label>
+        <input
+          type="range"
+          id="audioProgress"
+          class="progress-slider"
+          min="0"
+          max="100"
+          value="0"
+        />
+      </div>
+    </div>
+
+    <script src="AudioComponent.js"></script>
+  </body>
+</html>
