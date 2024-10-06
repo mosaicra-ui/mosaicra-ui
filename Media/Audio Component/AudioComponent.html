@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Audio Player</title>
+    <link rel="stylesheet" href="AudioComponent.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="audio-player">
+      <!-- Beat Animation -->
+      <div class="beat-animation">
+        <div class="beat-bar"></div>
+        <div class="beat-bar"></div>
+        <div class="beat-bar"></div>
+        <div class="beat-bar"></div>
+        <div class="beat-bar"></div>
+      </div>
+      <audio id="audio" class="audio">
+        <source src="audio.mp3" type="audio/mp3" />
+        Your browser does not support the audio tag.
+      </audio>
+
+      <div class="audio-controls">
+        <!-- Play Button -->
+        <button id="playPauseAudio" class="control-button">
+          <i id="audioPlayPauseIcon" class="fa fa-play"></i>
+        </button>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <input
+            type="range"
+            id="audioProgress"
+            class="progress-slider"
+            min="0"
+            max="100"
+            value="0"
+          />
+        </div>
+
+        <!-- Settings Button -->
+        <div class="dropdown">
+          <button class="dropdown-btn">
+            <i class="fa fa-cog"></i>
+          </button>
+          <div class="dropdown-content">
+            <label for="audioVolume">Volume:</label>
+            <input
+              type="range"
+              id="audioVolume"
+              class="volume-slider"
+              min="0"
+              max="1"
+              step="0.1"
+              value="1"
+            />
+
+            <label for="audioPlaybackRate">Playback Speed:</label>
+            <select id="audioPlaybackRate">
+              <option value="0.5">0.5x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="AudioComponent.js"></script>
+  </body>
+</html>
