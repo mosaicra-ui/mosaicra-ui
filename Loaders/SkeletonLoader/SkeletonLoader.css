@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.skeleton-card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* General Skeleton Style */
+.skeleton-header,
+.skeleton-text,
+.skeleton-image,
+.skeleton-button {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: skeleton-loading 2s infinite;
+}
+
+/* Skeleton Shape Variants */
+.skeleton-header {
+  height: 20px;
+  width: 60%;
+}
+
+.skeleton-text {
+  height: 14px;
+  width: 100%;
+}
+
+.skeleton-text.short {
+  width: 40%;
+}
+
+.skeleton-image {
+  height: 150px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.skeleton-button {
+  height: 40px;
+  width: 80%;
+  align-self: center;
+}
+
+/* Pulsing Animation */
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skeleton-card {
+    width: 250px;
+  }
+
+  .skeleton-header {
+    width: 70%;
+  }
+
+  .skeleton-text.short {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skeleton-card {
+    width: 200px;
+  }
+
+  .skeleton-header {
+    width: 80%;
+  }
+
+  .skeleton-text.short {
+    width: 60%;
+  }
+}
